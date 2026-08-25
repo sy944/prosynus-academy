@@ -1,0 +1,186 @@
+---
+---
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modulplan PROSYNUS KI-Masterclass (KOMPASS)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #ffffff !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#F9F5EE] text-gray-900 font-sans p-6 md:p-12 print:p-0">
+
+  <!-- PRINT BUTTON (Wird im PDF ausgeblendet) -->
+  <div class="max-w-4xl mx-auto mb-6 no-print flex justify-between items-center">
+    <a href="/" class="text-sm font-semibold text-gray-600 hover:text-black">← Zurück zur Website</a>
+    <button onclick="window.print()" class="bg-[#B21D42] hover:bg-[#901734] text-white font-bold px-5 py-2.5 rounded-xl shadow-sm text-sm transition-all cursor-pointer">
+      📄 Als PDF speichern / Drucken
+    </button>
+  </div>
+
+  <!-- DOKUMENT-CONTAINER -->
+  <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-gray-200/80 p-8 md:p-12 shadow-sm print:shadow-none print:border-none print:rounded-none">
+    
+    <!-- HEADER BEREICH -->
+    <div class="border-b border-gray-200 pb-8 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div>
+        <span class="inline-block text-[#B21D42] font-bold uppercase text-xs tracking-widest bg-red-50 px-3.5 py-1.5 rounded-full border border-red-100 mb-3">
+          Lehr- und Modulplan
+        </span>
+        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">PROSYNUS KI-Masterclass</h1>
+        <p class="text-gray-600 text-sm mt-1">Strukturierter Qualifizierungsplan zur KOMPASS-Einreichung</p>
+      </div>
+      <div class="text-left md:text-right text-xs text-gray-500 space-y-1 bg-[#F9F5EE] p-4 rounded-2xl border border-gray-200/60">
+        <p class="font-bold text-gray-900">PROSYNUS KI-Strategie & Organisation</p>
+        <p>Inhaber: Holger Symanski</p>
+        <p>Kralkamp 70 | 48308 Senden</p>
+        <p>E-Mail: symanski@prosynus.com</p>
+      </div>
+    </div>
+
+    <!-- RAHMENDATEN KACHELN -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+      <div class="bg-[#2E3641] text-white p-5 rounded-2xl">
+        <span class="text-xs text-gray-300 font-semibold uppercase tracking-wider block">Gesamtumfang</span>
+        <span class="text-2xl font-extrabold block mt-1">36 Zeitstunden</span>
+        <span class="text-[11px] text-gray-300 block mt-1">(4 strukturierte Module)</span>
+      </div>
+      <div class="bg-[#F9F5EE] p-5 rounded-2xl border border-gray-200/80">
+        <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block">Durchführungsform</span>
+        <span class="text-lg font-bold text-gray-900 block mt-1">Online-Workshop</span>
+        <span class="text-[11px] text-gray-600 block mt-1">Interaktiver Live-Unterricht</span>
+      </div>
+      <div class="bg-[#F9F5EE] p-5 rounded-2xl border border-gray-200/80">
+        <span class="text-xs text-gray-500 font-semibold uppercase tracking-wider block">Zielgruppe</span>
+        <span class="text-lg font-bold text-gray-900 block mt-1">Solo-Selbstständige</span>
+        <span class="text-[11px] text-gray-600 block mt-1">Förderprogramm KOMPASS</span>
+      </div>
+    </div>
+
+    <!-- MODULE LISTE -->
+    <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+      <span class="w-2.5 h-6 bg-[#B21D42] rounded-full inline-block"></span>
+      Modulübersicht des Online-Workshops
+    </h2>
+
+    <div class="space-y-6">
+      
+      <!-- MODUL 1 -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-xs page-break-inside-avoid">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="text-xs font-bold text-[#B21D42] tracking-wider uppercase">Modul 01</span>
+            <h3 class="text-lg font-bold text-gray-900">KI-Grundlagen & Angewandtes Prompting</h3>
+          </div>
+          <span class="bg-[#2E3641] text-white text-xs font-bold px-3 py-1.5 rounded-lg">10 Stunden</span>
+        </div>
+        <p class="text-xs text-gray-600 mb-4 leading-relaxed">
+          Verständnis von Generativer KI, Beherrschung professioneller Steuerungs-Frameworks für Large Language Models (ChatGPT, Claude) und systematische Qualitätskontrolle.
+        </p>
+        <div class="bg-[#F9F5EE]/70 p-4 rounded-xl border border-gray-200/50 text-xs">
+          <span class="font-bold text-gray-900 block mb-2 uppercase tracking-wider text-[10px]">Konkrete Lehrinhalte:</span>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Funktionsweise & Grenzen aktueller KI-Modelle</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Prompt-Engineering (Persona, Kontext, Output)</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Halluzinationen erkennen & Qualitätsprüfungsverfahren</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Standardisierte Workflows für Recherche & Textierung</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MODUL 2 -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-xs page-break-inside-avoid">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="text-xs font-bold text-[#B21D42] tracking-wider uppercase">Modul 02</span>
+            <h3 class="text-lg font-bold text-gray-900">Prozess-Automatisierung & KI-Assistenten</h3>
+          </div>
+          <span class="bg-[#2E3641] text-white text-xs font-bold px-3 py-1.5 rounded-lg">10 Stunden</span>
+        </div>
+        <p class="text-xs text-gray-600 mb-4 leading-relaxed">
+          Analyse operativer Abläufe im Solo-Business und Aufbau automatisierter Dokumenten- und Aufgabenverarbeitungen ohne Programmierkenntnisse.
+        </p>
+        <div class="bg-[#F9F5EE]/70 p-4 rounded-xl border border-gray-200/50 text-xs">
+          <span class="font-bold text-gray-900 block mb-2 uppercase tracking-wider text-[10px]">Konkrete Lehrinhalte:</span>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Systematische Identifikation repetitiver Aufgaben</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Einführung in No-Code Automatisierungstools</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Konzeption firmenspezifischer KI-Assistenten (Custom GPTs)</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Automatisierte Beleg- & E-Mail-Kategorisierung</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MODUL 3 -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-xs page-break-inside-avoid">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="text-xs font-bold text-[#B21D42] tracking-wider uppercase">Modul 03</span>
+            <h3 class="text-lg font-bold text-gray-900">Marketing, Content-Erstellung & Akquisition</h3>
+          </div>
+          <span class="bg-[#2E3641] text-white text-xs font-bold px-3 py-1.5 rounded-lg">8 Stunden</span>
+        </div>
+        <p class="text-xs text-gray-600 mb-4 leading-relaxed">
+          Effiziente Erstellung markengerechter Inhalte für Kundenkommunikation, digitale Kanäle und Angebote bei konsistentem Markenauftritt.
+        </p>
+        <div class="bg-[#F9F5EE]/70 p-4 rounded-xl border border-gray-200/50 text-xs">
+          <span class="font-bold text-gray-900 block mb-2 uppercase tracking-wider text-[10px]">Konkrete Lehrinhalte:</span>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Definition und Hinterlegung des Marken-Stils (Tone of Voice)</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> KI-gestützte Redaktions- und Themenplanung</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Texterstellung für Verkaufsseiten und Angebote</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Visuals & Grafiken: Grundlagen der KI-Bildgenerierung</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MODUL 4 -->
+      <div class="bg-white rounded-2xl border border-gray-200 p-6 shadow-xs page-break-inside-avoid">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="text-xs font-bold text-[#B21D42] tracking-wider uppercase">Modul 04</span>
+            <h3 class="text-lg font-bold text-gray-900">Datenschutz, KI-Ethik & DSGVO-Konformität</h3>
+          </div>
+          <span class="bg-[#2E3641] text-white text-xs font-bold px-3 py-1.5 rounded-lg">8 Stunden</span>
+        </div>
+        <p class="text-xs text-gray-600 mb-4 leading-relaxed">
+          Verantwortungsvolle und rechtssichere Anwendung von KI-Werkzeugen im geschäftlichen Rahmen unter Einhaltung europäischer Datenschutzstandards.
+        </p>
+        <div class="bg-[#F9F5EE]/70 p-4 rounded-xl border border-gray-200/50 text-xs">
+          <span class="font-bold text-gray-900 block mb-2 uppercase tracking-wider text-[10px]">Konkrete Lehrinhalte:</span>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700">
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> DSGVO-konforme Konfiguration der Online-Tools</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Sensibler Umgang mit Kundendaten und Unternehmensinterna</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Urheberrechtliche Grundlagen & Transparenzanforderungen</li>
+            <li class="flex items-center gap-2"><span class="text-[#B21D42] font-bold">•</span> Evaluation europäischer und datenschutzfreundlicher KI-Tools</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER / NACHWEIS-HINWEIS -->
+    <div class="mt-10 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+      <p>© 2026 PROSYNUS KI-Strategie und Organisation</p>
+      <p class="italic">Nach Abschluss wird eine qualifizierte Teilnahmebescheinigung (36 Zeitstunden) ausgestellt.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

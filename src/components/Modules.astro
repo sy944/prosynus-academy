@@ -1,0 +1,190 @@
+---
+const modules = [
+  {
+    id: "mod-1",
+    num: "01",
+    title: "KI-Grundlagen & Prompting",
+    description: "Lerne, wie du KI-Tools wie ChatGPT & Claude zielgerichtet anweist, um präzise Ergebnisse für deinen Arbeitsalltag zu erhalten.",
+    details: [
+      "Funktionsweise von Large Language Models verstehen",
+      "Strukturierte Prompt-Techniken (Persona, Kontext, Ziel, Output)",
+      "Fehler & Halluzinationen von KI sicher erkennen",
+      "Praxis-Workflows für alltägliche Schreib- und Rechercheaufgaben"
+    ],
+    bgClass: "bg-black text-[#FFFFFF] border-transparent cursor-pointer group hover:scale-[1.01]",
+    numClass: "text-white/30",
+    textClass: "text-gray-200"
+  },
+  {
+    id: "mod-2",
+    num: "02",
+    title: "Prozess-Automatisierung",
+    description: "Verbinde deine Tools miteinander und automatisiere wiederkehrende Aufgaben wie E-Mail-Sortierung, Rechnungsabwicklung und Recherche.",
+    details: [
+      "Identifikation von Zeitfressern im eigenen Business-Alltag",
+      "Einführung in No-Code Automatisierung (z. B. Make / Zapier)",
+      "Automatisches Auslesen und Kategorisieren von Dokumenten",
+      "Aufbau von wiederverwendbaren KI-Assistenten (Custom GPTs)"
+    ],
+    bgClass: "bg-white text-gray-900 border-gray-200/80 shadow-sm cursor-pointer group hover:scale-[1.01]",
+    numClass: "text-gray-400",
+    textClass: "text-gray-600"
+  },
+  {
+    id: "mod-3",
+    num: "03",
+    title: "Marketing & Content-Erstellung",
+    description: "Erstelle in wenigen Minuten hochwertigen Content für Social Media, Blogposts, Angebote und Marketing-Kampagnen.",
+    details: [
+      "Entwicklung einer konsistenten Markenstimme (Tone of Voice)",
+      "Erstellung von Redaktionsplänen und Social-Media-Posts auf Knopfdruck",
+      "Konzeption & Optimierung von Verkaufsseiten und Angebotstexten",
+      "Generierung & Bearbeitung von KI-Bildern für den Markenauftritt"
+    ],
+    bgClass: "bg-gray-700 text-white border-transparent cursor-pointer group hover:scale-[1.01]",
+    numClass: "text-white/30",
+    textClass: "text-gray-200"
+  },
+  {
+    id: "mod-4",
+    num: "04",
+    title: "Datenschutz & KI-Ethik",
+    description: "Rechtssichere Anwendung im Business: DSGVO-konformer Umgang mit Kundendaten und Auswahl der passenden Tools.",
+    details: [
+      "DSGVO-konforme Einstellungen in ChatGPT, Claude & Co.",
+      "Umgang mit vertraulichen Kunden- und Unternehmensdaten",
+      "Urheberrecht bei KI-generierten Inhalten & Bildern",
+      "Auswahl vertrauenswürdiger Tool-Anbieter aus Europa"
+    ],
+    bgClass: "bg-[#B21D42] text-white border-transparent cursor-pointer group hover:scale-[1.01]",
+    numClass: "text-white/30",
+    textClass: "text-red-100"
+  }
+];
+---
+
+<section id="inhalte" class="pt-12 md:pt-20 pb-4 md:pb-6 px-4">
+  <div class="max-w-5xl mx-auto">
+    
+    <div class="text-center mb-12">
+      <span class="text-[#B21D42] font-bold uppercase text-xs tracking-widest bg-red-50 px-3.5 py-1.5 rounded-full border border-red-100">
+        Praxisnahes Wissen
+      </span>
+      <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mt-4">
+        Das lernst du in der PROSYNUS KI-Masterclass
+      </h2>
+      <p class="text-gray-600 mt-2 max-w-xl mx-auto">
+        Klicke auf ein Modul, um alle Detailinhalte und Lernziele einzusehen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {modules.map((mod) => (
+        <div 
+          data-module-id={mod.id}
+          class={`rounded-3xl border p-8 shadow-sm transition-all flex flex-col justify-between ${mod.bgClass}`}
+        >
+          <div>
+            <div class="flex justify-between items-start">
+              <span class={`text-2xl font-black ${mod.numClass}`}>
+                {mod.num}
+              </span>
+              <span class="text-xs font-semibold underline underline-offset-4 opacity-80 group-hover:opacity-100">
+                Details anzeigen →
+              </span>
+            </div>
+            <h3 class="text-xl font-bold mt-2 mb-3">
+              {mod.title}
+            </h3>
+            <p class={`leading-relaxed text-sm ${mod.textClass}`}>
+              {mod.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+    <!-- BUTTON FÜR DEN MODULPLAN / PDF-EXPORT -->
+    <div class="mt-10 text-center">
+      <a 
+        href="/modulplan" 
+        target="_blank" 
+        class="inline-flex items-center gap-2.5 bg-gray-900 hover:bg-black text-white font-semibold px-6 py-3.5 rounded-2xl shadow-sm hover:shadow-md transition-all text-sm cursor-pointer"
+      >
+        <span class="text-base">📄</span>
+        <span>Detaillierten Modulplan öffnen (PDF)</span>
+        <span class="text-xs text-gray-300 font-normal">↗</span>
+      </a>
+    </div>
+
+  </div>
+
+  <dialog id="module-modal" class="rounded-3xl p-0 backdrop:bg-black/60 max-w-lg w-[90%] border border-gray-200 shadow-2xl bg-white">
+    <div class="p-6 md:p-8">
+      <div class="flex justify-between items-center mb-4 border-b pb-4 border-gray-100">
+        <div>
+          <span id="modal-num" class="text-xs font-bold text-[#B21D42] uppercase tracking-wider"></span>
+          <h3 id="modal-title" class="text-xl font-bold text-gray-900 mt-1"></h3>
+        </div>
+        <button id="close-modal" class="text-gray-400 hover:text-gray-900 font-bold text-xl px-3 py-1 rounded-lg hover:bg-gray-100">
+          ✕
+        </button>
+      </div>
+
+      <p id="modal-desc" class="text-sm text-gray-600 mb-6 leading-relaxed"></p>
+
+      <h4 class="text-xs font-bold uppercase text-gray-500 tracking-wider mb-3">
+        Konkrete Lerninhalte:
+      </h4>
+      <ul id="modal-list" class="space-y-2.5 text-sm text-gray-800"></ul>
+
+      <div class="mt-8 pt-4 border-t border-gray-100 text-right">
+        <button id="close-modal-btn" class="bg-[#2E3641] hover:bg-[#1E242B] text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">
+          Schließen
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+</section>
+
+<script define:vars={{ modules }}>
+  const modal = document.getElementById('module-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalNum = document.getElementById('modal-num');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalList = document.getElementById('modal-list');
+  const closeBtns = [document.getElementById('close-modal'), document.getElementById('close-modal-btn')];
+
+  document.querySelectorAll('[data-module-id]').forEach(card => {
+    card.addEventListener('click', () => {
+      const modId = card.getAttribute('data-module-id');
+      const modData = modules.find(m => m.id === modId);
+
+      if (modData) {
+        modalNum.textContent = `Modul ${modData.num}`;
+        modalTitle.textContent = modData.title;
+        modalDesc.textContent = modData.description;
+
+        modalList.innerHTML = modData.details
+          .map(item => `<li class="flex items-start gap-2"><span class="text-[#B21D42] font-bold">•</span><span>${item}</span></li>`)
+          .join('');
+
+        modal.showModal();
+      }
+    });
+  });
+
+  closeBtns.forEach(btn => btn?.addEventListener('click', () => modal.close()));
+  
+  modal?.addEventListener('click', (e) => {
+    const dialogBounds = modal.getBoundingClientRect();
+    if (
+      e.clientX < dialogBounds.left ||
+      e.clientX > dialogBounds.right ||
+      e.clientY < dialogBounds.top ||
+      e.clientY > dialogBounds.bottom
+    ) {
+      modal.close();
+    }
+  });
+</script>

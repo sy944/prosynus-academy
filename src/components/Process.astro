@@ -1,0 +1,77 @@
+---
+const steps = [
+  {
+    step: "01",
+    title: "Erstgespräch führen",
+    description: "In einem 15-minütigen Gespräch informieren wir dich unverbindlich über die Inhalte und den Ablauf der KI-Masterclass."
+  },
+  {
+    step: "02",
+    title: "Scheck bei Anlaufstelle erhalten",
+    description: "Du beantragst deinen Qualifizierungsscheck bei einer offiziellen KOMPASS-Beratungsstelle."
+  },
+  {
+    step: "03",
+    title: "KI-Masterclass absolvieren",
+    description: "Du lernst Schritt für Schritt in 35 Praxis-Stunden, wie du KI gewinnbringend in deinen Alltag integrierst."
+  },
+  {
+    step: "04",
+    title: "Zertifikat und Erstattung erhalten",
+    description: "Nach Kursabschluss reichst du dein Zertifikat ein und erhältst bis zu 90% der Kosten erstattet."
+  }
+];
+---
+
+<section id="ablauf" class="py-12 md:py-20 px-4 bg-[#2E3641] text-white">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="text-center mb-12">
+      <span class="text-white font-bold uppercase text-xs tracking-widest bg-white/10 px-3.5 py-1.5 rounded-full border border-white/20">
+        Einfacher Ablauf
+      </span>
+      <h2 class="text-2xl md:text-4xl font-extrabold text-white mt-4">
+        Dein Weg zur PROSYNUS KI-Masterclass
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/5]">
+          <img 
+            src="/images/process.jpg" 
+            alt="Beratungsgespräch & Coaching" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="absolute -bottom-5 -right-5 bg-[#B21D42] text-white p-4 rounded-2xl shadow-xl hidden sm:block max-w-[200px] border border-red-400">
+          <p class="text-xs font-bold leading-tight">Persönlich & Praxisnah </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="relative pl-6 space-y-6 before:absolute before:top-2 before:bottom-2 before:left-3 before:w-0.5 before:bg-white/20">
+          {steps.map((item) => (
+            <div class="relative flex items-start gap-4">
+              <div class="absolute -left-6 top-1 w-7 h-7 rounded-full bg-[#B21D42] text-white font-bold flex items-center justify-center text-xs z-10 border-2 border-[#2E3641]">
+                {item.step}
+              </div>
+
+              <div class="bg-white text-gray-900 p-5 rounded-2xl shadow-md border border-gray-200/80 w-full ml-2">
+                <h3 class="text-base font-bold text-gray-900 mb-1">
+                  {item.title}
+                </h3>
+                <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

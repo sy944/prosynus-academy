@@ -1,0 +1,60 @@
+---
+const criteria = [
+  {
+    title: "Hauptberuflich Solo-Selbstständig",
+    description: "Du führst dein Business im Haupterwerb und beschäftigst maximal eine/n Vollzeit-Angestellte/n. Mindestens 51% deines Gesamteinkommens stammen aus dieser Tätigkeit.",
+    tag: null
+  },
+  {
+    title: "Seit mind. 2 Jahren am Markt",
+    description: "Dein Unternehmen besteht bereits seit mindestens zwei Jahren aktiv am deutschen Markt.",
+    tag: null
+  },
+  {
+    title: "Mindestdauer erfüllt",
+    description: "Die Weiterbildung muss mindestens 20 Stunden umfassen. Unsere PROSYNUS KI-Masterclass ist mit 36 Stunden perfekt darauf ausgelegt.",
+    tag: null
+  },
+  {
+    title: "Bis zu 90% Zuschuss",
+    description: "Der Staat übernimmt über das KOMPASS-Programm einen Großteil der Qualifizierungskosten.",
+    tag: "Deine Förderung"
+  }
+];
+---
+
+<section id="foerderung" class="py-12 md:py-16 px-4 bg-[#B21D42]">
+  <div class="max-w-6xl mx-auto">
+    
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold text-white">
+  Erfüllst du die Voraussetzungen für das<br class="hidden md:block" />KOMPASS-Förderprogramm?
+</h2>
+      <p class="text-red-100 mt-2 font-medium">
+        Die wichtigsten Rahmenbedingungen auf einen Blick:
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {criteria.map((item) => (
+        <div class="bg-white rounded-3xl border border-gray-200/80 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            {item.tag && (
+              <span class="inline-block text-xs font-semibold text-white uppercase tracking-wider bg-black px-3 py-1 rounded-full border border-black mb-4">
+                {item.tag}
+              </span>
+            )}
+
+            <h3 class="text-base font-bold text-gray-900 mb-2">
+              {item.title}
+            </h3>
+            <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
