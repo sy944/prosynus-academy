@@ -13,7 +13,7 @@ const steps = [
   {
     step: "03",
     title: "KI-Masterclass absolvieren",
-    description: "Du lernst Schritt für Schritt in 35 Praxis-Stunden, wie du KI gewinnbringend in deinen Alltag integrierst."
+    description: "Du lernst Schritt für Schritt in 36 Praxis-Stunden, wie du KI gewinnbringend in deinen Alltag integrierst."
   },
   {
     step: "04",
@@ -65,6 +65,30 @@ const steps = [
                 <p class="text-gray-600 text-xs md:text-sm leading-relaxed">
                   {item.description}
                 </p>
+
+                {item.step === "01" && (
+                  <div class="mt-4 pt-3 border-t border-gray-100 bg-emerald-50/80 rounded-xl p-3.5 border border-emerald-200/80">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      <div>
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded mb-1">
+                          Option 1a • Selbstzahler
+                        </span>
+                        <h4 class="text-xs md:text-sm font-bold text-gray-900">
+                          Du benötigst keine Förderung?
+                        </h4>
+                        <p class="text-xs text-gray-600 mt-0.5">
+                          Mit oder ohne Erstgespräch direkt anmelden (Selbstzahler).
+                        </p>
+                      </div>
+                      <a 
+  href="mailto:szymanski@prosynus.com?subject=Direktanmeldung%20KI-Masterclass&body=Hallo%20Herr%20Szymanski,%0A%0Aich%20möchte%20mich%20direkt%20für%20die%20KI-Masterclass%20als%20Selbstzahler%20anmelden.%0A%0ABevorzugtes%20Startdatum:%20%0AName:%20%0ATelefonnummer:%20"
+  class="inline-flex items-center justify-center px-3.5 py-2 bg-[#B21D42] hover:bg-[#961837] text-white text-xs font-semibold rounded-xl transition-colors whitespace-nowrap shadow-sm self-start sm:self-center"
+>
+  ✉️ Direkt per E-Mail anmelden
+</a>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
