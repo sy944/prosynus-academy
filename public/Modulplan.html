@@ -1,6 +1,3 @@
----
-// src/pages/modulplan.astro
----
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -22,26 +19,26 @@
 
         @page {
             size: A4;
-            margin: 12mm 15mm;
+            margin: 10mm 12mm;
         }
 
         @media print {
             body { 
                 background-color: #ffffff !important; 
                 color: #000000 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                padding: 0 !important;
             }
             .no-print { display: none !important; }
             main {
                 box-shadow: none !important;
                 border: none !important;
                 padding: 0 !important;
-                margin: 0 !important;
                 max-width: 100% !important;
+                background-color: #ffffff !important;
             }
-            .print-card {
+            section, .print-card {
                 break-inside: avoid;
+                margin-bottom: 0.75rem !important;
             }
         }
     </style>
@@ -50,10 +47,9 @@
 
     <!-- Druck-Steuerung -->
     <div class="max-w-4xl mx-auto mb-4 flex justify-between items-center no-print">
-        <!-- NEU: -->
-<a href="/" class="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">
-    ← Zurück zur Startseite
-</a>
+        <a href="javascript:history.back()" class="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors">
+            ← Zurück
+        </a>
         <button onclick="window.print()" class="bg-[#B21D42] hover:bg-[#961837] text-white px-6 py-2.5 rounded-xl font-semibold text-xs transition-colors shadow-sm flex items-center gap-2">
             🖨️ Als PDF drucken / speichern
         </button>
@@ -63,7 +59,7 @@
     <main class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-slate-200/80">
         
         <!-- HEADER: PROSYNUS Branding -->
-        <header class="flex flex-col items-center select-none mb-6 print:mb-4 pb-4 border-b border-slate-100">
+        <header class="flex flex-col items-center select-none mb-6 pb-4 border-b border-slate-100">
             <h1 class="text-2xl font-serif font-bold tracking-[0.18em] text-[#2E3641]">PROSYNUS</h1>
             <div class="flex gap-1.5 items-center text-[#B21D42] text-[9px] my-1">
                 ★ ★ ★
@@ -72,34 +68,34 @@
         </header>
 
         <!-- DOKUMENTENTITEL -->
-        <div class="text-center mb-8 print:mb-5">
+        <div class="text-center mb-8">
             <h2 class="text-xl md:text-2xl font-extrabold text-[#2E3641]">PROSYNUS KI-Masterclass für (Solo-)Selbstständige</h2>
             <p class="text-xs text-slate-500 mt-1">Praxisorientierte Befähigung zur nachhaltigen Prozessautomatisierung und KI-Nutzung</p>
         </div>
 
         <!-- RAHMENDATEN GRID -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 print:mb-5 text-xs">
-            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80 print-card">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-xs">
+            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80">
                 <span class="block text-[9px] font-bold uppercase text-slate-400">Umfang & Dauer</span>
                 <span class="font-bold text-[#2E3641]">36 Std. / 10 Termine</span>
             </div>
-            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80 print-card">
+            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80">
                 <span class="block text-[9px] font-bold uppercase text-slate-400">Format</span>
                 <span class="font-bold text-[#2E3641]">100% Live-Online</span>
             </div>
-            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80 print-card">
+            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80">
                 <span class="block text-[9px] font-bold uppercase text-slate-400">Gruppengröße</span>
                 <span class="font-bold text-[#2E3641]">Min. 2 – Max. 12</span>
             </div>
-            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80 print-card">
+            <div class="bg-[#FAF8F5] p-3 rounded-xl border border-slate-200/80">
                 <span class="block text-[9px] font-bold uppercase text-slate-400">Investition bei Förderung</span>
                 <span class="font-bold text-[#B21D42]">385 € Eigenanteil*</span>
             </div>
         </div>
 
         <!-- MODUL-ÜBERSICHT (CURRICULUM) -->
-        <section class="mb-8 print:mb-5">
-            <h3 class="text-xs font-bold uppercase tracking-wider text-[#2E3641] border-b pb-2 border-slate-200 mb-4 print:mb-3">
+        <section class="mb-8 print-card">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-[#2E3641] border-b pb-2 border-slate-200 mb-4">
                 Curriculum & Lernziele (Die 4 Module im Detail)
             </h3>
 
@@ -107,7 +103,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[11px] leading-relaxed">
                 
                 <!-- Modul 1 -->
-                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60 print-card">
+                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60">
                     <strong class="text-[#2E3641] text-sm block mb-1">Modul 01: KI-Grundlagen & Advanced Prompting</strong>
                     <p class="text-[10px] text-slate-500 mb-2 italic">Lerne, wie du führende KI-Systeme (ChatGPT, Claude, Gemini) zielgerichtet steuerst und präzise Ergebnisse für deinen Business-Alltag erzielst.</p>
                     <ul class="list-disc pl-3 text-slate-600 space-y-1 marker:text-[#B21D42]">
@@ -119,7 +115,7 @@
                 </div>
 
                 <!-- Modul 2 -->
-                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60 print-card">
+                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60">
                     <strong class="text-[#2E3641] text-sm block mb-1">Modul 02: KI-Agenten & Prozess-Automatisierung</strong>
                     <p class="text-[10px] text-slate-500 mb-2 italic">Nutze die Kraft von agentischer KI und No-Code-Tools, um zeitintensive Routineaufgaben wie E-Mail-Sortierung, Kundenanfragen und Belegverarbeitung vollständig zu automatisieren.</p>
                     <ul class="list-disc pl-3 text-slate-600 space-y-1 marker:text-[#B21D42]">
@@ -131,7 +127,7 @@
                 </div>
 
                 <!-- Modul 3 -->
-                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60 print-card">
+                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60">
                     <strong class="text-[#2E3641] text-sm block mb-1">Modul 03: Performance-Marketing & Content-Engine</strong>
                     <p class="text-[10px] text-slate-500 mb-2 italic">Baue dir eine KI-gestützte Content-Maschine auf und erstelle in wenigen Minuten professionelle Marketing-Inhalte, Bildwelten und Verkaufstexte.</p>
                     <ul class="list-disc pl-3 text-slate-600 space-y-1 marker:text-[#B21D42]">
@@ -143,7 +139,7 @@
                 </div>
 
                 <!-- Modul 4 -->
-                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60 print-card">
+                <div class="bg-slate-50/50 p-4 rounded-xl border border-slate-200/60">
                     <strong class="text-[#2E3641] text-sm block mb-1">Modul 04: Rechtssicherheit, DSGVO & KI-Ethik</strong>
                     <p class="text-[10px] text-slate-500 mb-2 italic">Wende KI-Technologien im Einzelunternehmen rechtssicher an – inklusive Datenschutz, Urheberrecht und der Vergabe des Masterzertifikats.</p>
                     <ul class="list-disc pl-3 text-slate-600 space-y-1 marker:text-[#B21D42]">
@@ -157,8 +153,8 @@
             </div>
         </section>
 
-        <!-- QUALITÄTSSICHERUNG & FÖRDER-RAHMENDATEN -->
-        <section class="p-4 bg-[#FAF8F5] rounded-xl border border-slate-200/80 mb-6 print:mb-4 print-card">
+        <!-- QUALITÄTSSICHERUNG & FÖRDER-RAHMENDATEN (KOMPASS-RICHTLINIEN) -->
+        <section class="p-4 bg-[#FAF8F5] rounded-xl border border-slate-200/80 mb-6 print-card">
             <h4 class="font-bold text-[10px] text-[#B21D42] uppercase tracking-wider mb-2">
                 Qualitätssicherung & Förderkonformität (gemäß KOMPASS / ESF Plus)
             </h4>

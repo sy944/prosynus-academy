@@ -1,61 +1,107 @@
 ---
+// src/components/KeyFacts.astro
 ---
 
-<section class="py-16 bg-[#FAF8F5] text-slate-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Auf einen Blick</h2>
+<section class="py-16 md:py-24 bg-white relative">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Kachel 1: Umfang & Preis -->
-      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-[#2E3641] font-bold text-lg mb-2">Investition & Dauer</h3>
-        <div class="text-slate-900">
-          <span class="text-xl font-bold">3.850 €</span> 
-          <span class="text-xs text-slate-500">(regulärer Kurswert)</span>
+    <!-- ÜBERSCHRIFTEN-BEREICH -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#2E3641] mb-4">
+        Die Masterclass auf einen Blick
+      </h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
+        Alle organisatorischen Details zu Ihrer geförderten KI-Weiterbildung. Kompakt und transparent.
+      </p>
+    </div>
+
+    <!-- DIE 4 KACHELN (2x2 Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Kachel 1: Investition & Dauer -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-[#B21D42]/30 transition-all flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-extrabold text-[#2E3641] mb-3">Investition & Dauer</h3>
+          <p class="text-sm text-slate-600 mb-3">
+            Regulärer Kurswert: <strong class="font-bold text-[#2E3641]">3.850 €</strong>
+          </p>
+          
+          <!-- Förder-Box -->
+          <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3.5 mb-4 text-emerald-900 text-xs leading-relaxed">
+            <strong>KOMPASS-Gefördert*:</strong> nur 385 € Eigenanteil <br />
+            <span class="font-medium">(90 % Übernahme bei Bewilligung).</span>
+          </div>
         </div>
-        
-        <div class="mt-2 mb-3 p-2 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-800 text-xs font-medium">
-          <strong>KOMPASS-Gefördert:</strong> Nur <strong>385 €</strong> Eigenanteil (90 % Übernahme bei Bewilligung).
+
+        <p class="text-sm text-slate-600 leading-relaxed">
+          36 Stunden in 10 Wochen: 1 Termin pro Woche ab 16:00 Uhr (Startzeit flexibel nach Absprache im Kurs).
+        </p>
+      </div>
+
+      <!-- Kachel 2: Modulstruktur & Durchführung -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-[#B21D42]/30 transition-all flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-extrabold text-[#2E3641] mb-3">Modulstruktur & Durchführung</h3>
+          <p class="text-sm text-slate-600 leading-relaxed mb-3">
+            10 Termine und 100 % Live-Online-Unterricht. Insgesamt 36 Stunden geballtes KI-Wissen, didaktisch perfekt auf Solo-Selbstständige zugeschnitten.
+          </p>
+          <p class="text-sm text-[#2E3641] font-bold mb-4">
+            Wir starten bei 0: Keine Programmierkenntnisse erforderlich.
+          </p>
         </div>
 
-        <p class="text-slate-700 text-sm leading-relaxed">
-          <strong>36 Std. in 10 Wochen:</strong> 1 Termin pro Woche (ab 16:00 Uhr, Startzeit flexibel nach Absprache im Kurs).
+        <p class="text-xs text-slate-500 leading-relaxed pt-3 border-t border-slate-100">
+          Aus Gründen der Vertraulichkeit und Qualitätssicherung finden keine Videoaufzeichnungen statt. Interaktives Gruppentraining (min. 2, max. 12 Teilnehmer).
         </p>
       </div>
 
-      <!-- Kachel 2: Modul-Aufteilung -->
-      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-[#2E3641] font-bold text-lg mb-2">Modul-Struktur</h3>
-        <p class="text-slate-700 text-sm leading-relaxed">
-          <strong>Modul 1:</strong> 3 Termine à 4 Std.<br/>
-          <strong>Modul 2:</strong> 3 Termine à 4 Std.<br/>
-          <strong>Modul 3:</strong> 2 Termine à 3 Std.<br/>
-          <strong>Modul 4:</strong> 2 Termine à 3 Std.<br/><br/>
-          Volle Übersicht und Transparenz vom ersten Tag an.
-        </p>
+      <!-- Kachel 3: Aktuelle Starttermine -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-[#B21D42]/30 transition-all flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-extrabold text-[#2E3641] mb-3">Aktuelle Starttermine</h3>
+          
+          <ul class="text-xs space-y-2 my-1">
+            <li class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <span class="text-slate-400">27.08. (Do) & 08.09. (Di)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-400">Ausgebucht</span>
+            </li>
+            <li class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <span class="font-medium text-slate-700">10.09. (Do)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">Warteliste</span>
+            </li>
+            <li class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <span class="font-medium text-slate-700">17.09. (Do)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Freie Plätze</span>
+            </li>
+            <li class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <span class="font-medium text-slate-700">22.09. (Di)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Freie Plätze</span>
+            </li>
+            <li class="flex items-center justify-between pb-1.5 border-b border-slate-100">
+              <span class="font-medium text-slate-700">15.10. (Do)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Freie Plätze</span>
+            </li>
+            <li class="flex items-center justify-between pt-0.5">
+              <span class="font-medium text-slate-700">20.10. (Di)</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Freie Plätze</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Kachel 3: Starttermine & Status -->
-      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-[#2E3641] font-bold text-lg mb-2">Aktuelle Starttermine</h3>
-        <ul class="list-disc list-inside text-slate-900 text-xs space-y-1.5 mt-2">
-          <li><strong>27.08. (Do) & 08.09. (Di):</strong> Ausgebucht</li>
-          <li><strong>10.09. (Do):</strong> Warteliste</li>
-          <li><strong>17.09. (Do):</strong> Freie Plätze</li>
-          <li><strong>22.09. (Di):</strong> Freie Plätze</li>
-          <li><strong>15.10. (Do):</strong> Freie Plätze</li>
-          <li><strong>20.10. (Di):</strong> Freie Plätze</li>
-        </ul>
+      <!-- Kachel 4: Abschlusszertifikat (Farblich hervorgehoben in Anthrazit) -->
+      <div class="bg-[#2E3641] p-6 md:p-8 rounded-2xl border border-slate-800 shadow-md flex flex-col justify-between text-white relative overflow-hidden">
+        <div>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#B21D42] text-white mb-3">
+            Qualitätsnachweis
+          </span>
+          <h3 class="text-xl font-extrabold text-white mb-3">Abschlusszertifikat</h3>
+          <p class="text-sm text-slate-200 leading-relaxed">
+            Nach erfolgreichem Abschluss erhalten Sie das offizielle <strong class="text-white font-bold">PROSYNUS-Zertifikat</strong>. Es bescheinigt Ihre fundierte KI-Kompetenz und ist ein wertvoller Baustein für Ihre fachliche Reputation und zukünftige Aufträge.
+          </p>
+        </div>
       </div>
 
-      <!-- Kachel 4: Qualität & Vorkenntnisse -->
-      <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-        <h3 class="text-[#2E3641] font-bold text-lg mb-2">Max. 10 Teilnehmer</h3>
-        <p class="text-slate-700 text-sm leading-relaxed">
-          <strong>Wir starten bei Null:</strong> Keine Programmierkenntnisse erforderlich.<br/><br/>
-          Feste Obergrenze für maximale persönliche Betreuung im Live-Online-Training.
-        </p>
-      </div>
     </div>
   </div>
 </section>
